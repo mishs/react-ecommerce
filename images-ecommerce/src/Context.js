@@ -14,10 +14,11 @@ function ContextProvider({children}){
                 //fetch API returns promise to pass as json
             fetch(url)
             
-                .then(res => res.json())
+                .then(res => res.json(), {mode: "no-cors" })
                 .then(data => setAllPhotos(data))
                 
     }, [] )
+    .catch(err => console.error(err));
 
     console.log(allPhotos)
 
