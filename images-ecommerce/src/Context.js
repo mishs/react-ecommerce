@@ -6,7 +6,7 @@ function ContextProvider({children}){
     const [allPhotos, setAllPhotos] = useState([])
     // ({children}) is equal to props.children. Just that here did destructure
     return (
-        <Context.Provider value="">
+        <Context.Provider value={{allPhotos}}>
             {children}
             {/* since it's a custom component (to wrap around whole component in our app) */}
         </Context.Provider>
