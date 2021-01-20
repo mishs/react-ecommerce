@@ -18,7 +18,7 @@ function ContextProvider({children}){
                 .then(data => setAllPhotos(data))
                 
     }, [] )
-    .catch(err => console.error(err));
+    // .catch(err => console.error(err));
 
     console.log(allPhotos)
 
