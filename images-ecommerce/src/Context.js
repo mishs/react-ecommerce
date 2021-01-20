@@ -7,7 +7,7 @@ function ContextProvider({children}){
     // ({children}) is equal to props.children. Just that here did destructure
 
     //Get the data from API
-    const url = "https://github.com/mishs/react-ecommerce/blob/images-handling/project-images/images.json"
+    const url = "https://github.com/mishs/react-ecommerce/blob/main/images-ecommerce/project-images/images.json"
     // const noCors = {mode: "no-cors"}
     useEffect(() => {
                 //save data to state
