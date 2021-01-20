@@ -11,3 +11,6 @@ function ContextProvider({children}){
         </Context.Provider>
     )
 }
+
+export {ContextProvider, Context}
+//named exports to enable both exports
