@@ -2,7 +2,6 @@ import React, {useState} from "react"
 
 function Image({className, imgProp}) {
     const [isHovered, setHovered] = useState(false)
-    const heartIcon = isHovered ? 
     const heartIcon = isHovered && <i className="ri-heart-line favorite"></i>
     const cartIcon = isHovered && <i className="ri-add-circle-line cart"></i>
 
@@ -14,6 +13,8 @@ function Image({className, imgProp}) {
         onMouseLeave={() => setHovered(false)}
         >
             <img src={imgProp.url} alt="each for sell" className="image-grid"/>
+            {heartIcon}
+            {cartIcon}
         </div>
     )
 }
