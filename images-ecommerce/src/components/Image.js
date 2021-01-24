@@ -1,9 +1,9 @@
 import React from "react"
 
-function Image({className, photoProp}) {
+function Image({className, imgProp}) {
     return (
         <div className={`${className} image-container`}>
-            <img src={photoProp.url} className="image-grid"/>
+            <img src={imgProp.url} alt="each for sell" className="image-grid"/>
         </div>
     )
 }
