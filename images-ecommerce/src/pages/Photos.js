@@ -1,4 +1,6 @@
-import React from "react"
+import React, { useContext } from "react"
+import Image from "../components/Image"
+import Context from "../Context"
 
 function Photos() {
     return (
