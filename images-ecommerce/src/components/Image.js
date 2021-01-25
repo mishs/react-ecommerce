@@ -30,4 +30,13 @@ function Image({className, imgProp}) {
         </div>
     )
 }
+
+Image.propTypes = {
+    className: PropTypes.string,
+    img: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+        isFavorite: PropTypes.bool
+    })
+}
 export default Image
