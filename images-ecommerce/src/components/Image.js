@@ -23,7 +23,7 @@ function Image({className, imgProp}) {
         onMouseLeave={() => setHovered(false)}
         >
             <img src={imgProp.url} alt="each for sell" className="image-grid"/>
-            {heartIcon}
+            {heartIcon()}
             {cartIcon}
         </div>
     )
