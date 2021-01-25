@@ -5,7 +5,7 @@ import {Context} from "../Context"
 
 function Image({className, imgProp}) {
     const [isHovered, setHovered] = useState(false)
-    const {toggleIsFavorite} = useContext(Context)
+    const {toggleIsFavorite, addToCart} = useContext(Context)
 
     const heartIcon = () =>{
         if(imgProp.isFavorite){
