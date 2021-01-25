@@ -29,6 +29,11 @@ function ContextProvider({children}){
       setAllPhotos(updateImages)
   }
 
+  const addToCart = newItem => {
+    setCartItems(prevItems => [...prevItems, newItem])
+  }
+  console.log(cartItems)
+
     return (
         <Context.Provider value={{allPhotos, toggleIsFavorite}}>
             {children}
