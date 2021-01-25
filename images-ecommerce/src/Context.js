@@ -29,7 +29,7 @@ function ContextProvider({children}){
   }
 
     return (
-        <Context.Provider value={{allPhotos}}>
+        <Context.Provider value={{allPhotos, toggleIsFavorite}}>
             {children}
             {/* since it's a custom component (to wrap around whole component in our app) */}
         </Context.Provider>
