@@ -15,7 +15,7 @@ function Image({className, imgProp}) {
             return <i className="ri-heart-line favorite" onClick={() => toggleIsFavorite(imgProp.id)}></i>
         }
     }      
-    const cartIcon = isHovered && <i className="ri-add-circle-line cart"></i>
+    const cartIcon = isHovered && <i className="ri-add-circle-line cart" onClick={() => addToCart(imgProp)}></i>
 
     // This  (&&) is equal to : isHovered ? <i className="ri-heart-line favorite"></i> : null
     return (
