@@ -4,6 +4,7 @@ const Context = React.createContext()
 
 function ContextProvider({children}){
     const [allPhotos, setAllPhotos] = useState([])
+    const [cartItems, setCartItems] = useState([])
     // ({children}) is equal to props.children. Just that here did destructure
 
   const url = "https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json"
