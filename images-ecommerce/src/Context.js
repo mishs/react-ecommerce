@@ -35,7 +35,7 @@ function ContextProvider({children}){
   console.log(cartItems)
 
     return (
-        <Context.Provider value={{allPhotos, toggleIsFavorite}}>
+        <Context.Provider value={{allPhotos, toggleIsFavorite, addToCart}}>
             {children}
             {/* since it's a custom component (to wrap around whole component in our app) */}
         </Context.Provider>
