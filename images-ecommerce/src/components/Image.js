@@ -1,4 +1,5 @@
-import React, {useState} from "react"
+import React, {useState, useContext} from "react"
+import {Context} from "../Context"
 
 function Image({className, imgProp}) {
     const [isHovered, setHovered] = useState(false)
