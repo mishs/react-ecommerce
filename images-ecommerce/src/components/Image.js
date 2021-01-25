@@ -3,7 +3,8 @@ import {Context} from "../Context"
 
 function Image({className, imgProp}) {
     const [isHovered, setHovered] = useState(false)
-    const heartIcon = isHovered && <i className="ri-heart-line favorite"></i>
+    const {toggleIsFavorite} = useContext(Context)
+    const heartIcon = isHovered && <i className="ri-heart-line favorite" onClick={() => toggleIsFavorite(imgProp.id)}></i>
     const cartIcon = isHovered && <i className="ri-add-circle-line cart"></i>
 
     // This  (&&) is equal to : isHovered ? <i className="ri-heart-line favorite"></i> : null
