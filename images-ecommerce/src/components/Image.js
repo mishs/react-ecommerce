@@ -1,9 +1,11 @@
 import React, {useState, useContext} from "react"
+import PropTypes from "prop-types"
+
 import {Context} from "../Context"
 
 function Image({className, imgProp}) {
     const [isHovered, setHovered] = useState(false)
-    const {toggleIsFavorite} = useContext(Context)
+    const {toggleIsFavorite, addToCart} = useContext(Context)
 
     const heartIcon = () =>{
         if(imgProp.isFavorite){
@@ -13,7 +15,7 @@ function Image({className, imgProp}) {
             return <i className="ri-heart-line favorite" onClick={() => toggleIsFavorite(imgProp.id)}></i>
         }
     }      
-    const cartIcon = isHovered && <i className="ri-add-circle-line cart"></i>
+    const cartIcon = isHovered && <i className="ri-add-circle-line cart" onClick={() => addToCart(imgProp)}></i>
 
     // This  (&&) is equal to : isHovered ? <i className="ri-heart-line favorite"></i> : null
     return (
@@ -27,5 +29,14 @@ function Image({className, imgProp}) {
             {cartIcon}
         </div>
     )
+}
+
+Image.propTypes = {
+    className: PropTypes.string,
+    img: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+        isFavorite: PropTypes.bool
+    })
 }
 export default Image

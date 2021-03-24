@@ -4,6 +4,7 @@ const Context = React.createContext()
 
 function ContextProvider({children}){
     const [allPhotos, setAllPhotos] = useState([])
+    const [cartItems, setCartItems] = useState([])
     // ({children}) is equal to props.children. Just that here did destructure
 
   const url = "https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json"
@@ -28,8 +29,13 @@ function ContextProvider({children}){
       setAllPhotos(updateImages)
   }
 
+  const addToCart = newItem => {
+    setCartItems(prevItems => [...prevItems, newItem])
+  }
+  console.log(cartItems)
+
     return (
-        <Context.Provider value={{allPhotos, toggleIsFavorite}}>
+        <Context.Provider value={{allPhotos, toggleIsFavorite, addToCart}}>
             {children}
             {/* since it's a custom component (to wrap around whole component in our app) */}
         </Context.Provider>
